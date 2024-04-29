@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Meme</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Include Header -->
+    <%- include('header') %>
+
+    <div class="container mt-5">
+        <h1>Add New Meme</h1>
+        <form action="/memes" method="POST">
+            <!-- Meme name field -->
+            <div class="form-group">
+                <label for="name">Meme Name:</label>
+                <input type="text" class="form-control" id="name" name="name">
+            </div>
+            <!-- Meme price field -->
+            <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="text" class="form-control" id="price" name="price">
+            </div>
+            <!-- Image URL field -->
+            <div class="form-group">
+                <label for="imageURL">Image URL:</label>
+                <input type="text" class="form-control" id="imageURL" name="imageURL">
+            </div>
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary">Add Meme</button>
+        </form>
+    </div>
+    <br/>
+    <!-- Include Footer -->
+    <%- include('footer') %>
+
+    <!-- Bootstrap JS (if needed) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
